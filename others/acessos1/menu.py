@@ -1,7 +1,5 @@
 from logo_tahto import logo
 from selecionar_arquivo import selecionarArquivo
-from filtrar import verificarMatricula
-from gerar_beneficiarios import gerarBeneficiarios
 import os
 from pathlib import Path
 
@@ -21,12 +19,13 @@ arquivo_gip = None
 limparTela()
 
 
+
 while True:
 	limparTela()
 	cabecalho()
-	# print(planilha_padrao)
-	# print(arquivo_gip)
-	print(f"Arquivos selecionados: {[planilha_padrao, arquivo_gip]}")
+	print(planilha_padrao)
+	print(arquivo_gip)
+	print("Arquivos selecionados: Nemhum")
 	print("\n")
 	print("1 - Selecionar Arquivos")
 	print("2 - Verificar Matrículas")
@@ -39,14 +38,3 @@ while True:
 		cabecalho()
 
 		planilha_padrao, arquivo_gip = selecionarArquivo()
-
-	elif escolha == "2":
-		limparTela()
-		cabecalho()
-		matriculas = verificarMatricula(planilha_padrao, arquivo_gip)
-
-	elif escolha == "3":
-		limparTela()
-		cabecalho()
-		gerarBeneficiarios(matriculas)
-
