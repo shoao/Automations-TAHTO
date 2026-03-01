@@ -1,4 +1,5 @@
 from openpyxl import Workbook
+from pathlib import Path
 
 def gerarBeneficiarios(matriculas):
     beneficiarios = Workbook()
@@ -11,9 +12,11 @@ def gerarBeneficiarios(matriculas):
     for linha, matricula in enumerate(matriculas, start=2):
         aba_beneficiarios[f"A{linha}"] = matricula
 
-    beneficiarios.save("BENEFICIARIOS.xlsx")
+    # 👇 única mudança real
+    pasta = Path(__file__).resolve().parent.parent.parent / "planilhas"
+    beneficiarios.save(pasta / "BENEFICIARIOS.xlsx")
 
     while True:
-        print(f"Arquivo criado, matriculas: {matriculas}")
-        x = input("Digite para sair: ")
+        print(f"\nArquivo criado, matriculas: {matriculas}")
+        input("\nDigite para sair: ")
         break
