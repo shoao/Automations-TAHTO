@@ -96,7 +96,7 @@ def verificarMatricula(nome_arquivo, nome_arquivo_gip):
 			print("\n")
 
 	while True:
-		escolha = input("Digite para sair: ")
+		input("Digite para sair: ")
 		break
 		
 	return matriculas

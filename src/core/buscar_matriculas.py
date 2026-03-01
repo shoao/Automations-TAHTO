@@ -45,5 +45,5 @@ def buscarMatriculas(arquivo_gip):
 				print(f"Região: {regiao}")
 				print(f"Status: {status}")
 
-		escolha = input("\nDigite para sair: ")
+		input("\nDigite para sair: ")
 		break
