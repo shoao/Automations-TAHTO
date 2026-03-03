@@ -1,6 +1,6 @@
 from src.terminal.logo_tahto import logo
 from src.core.selecionar_arquivo import selecionarArquivo
-from src.core.filtrar import verificarMatricula
+from src.core.filtrar_planilha import verificarMatricula
 from src.core.gerar_beneficiarios import gerarBeneficiarios
 from src.core.buscar_matriculas import buscarMatriculas
 import os
