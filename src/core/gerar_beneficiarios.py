@@ -12,7 +12,6 @@ def gerarBeneficiarios(matriculas):
     for linha, matricula in enumerate(matriculas, start=2):
         aba_beneficiarios[f"A{linha}"] = matricula
 
-    # 👇 única mudança real
     pasta = Path(__file__).resolve().parent.parent.parent / "planilhas"
     beneficiarios.save(pasta / "BENEFICIARIOS.xlsx")
 
