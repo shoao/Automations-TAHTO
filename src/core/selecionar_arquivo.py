@@ -13,7 +13,7 @@ def selecionarArquivo():
         print(f"{i} - {f.name}")
 
     escolha = int(input(": "))
-    planilha_padrao = arquivos[escolha - 1]  # 👈 sem .name
+    planilha_padrao = arquivos[escolha - 1]
 
     print(f"\nVocê selecionou: {planilha_padrao.name}\n")
 
@@ -22,7 +22,7 @@ def selecionarArquivo():
         print(f"{i} - {f.name}")
 
     escolha = int(input(": "))
-    arquivo_gip = arquivos[escolha - 1]  # 👈 sem .name
+    arquivo_gip = arquivos[escolha - 1]
 
     print(f"\nVocê selecionou: {arquivo_gip.name}\n")
 
