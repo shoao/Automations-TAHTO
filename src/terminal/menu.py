@@ -1,18 +1,16 @@
 from src.terminal.logo_tahto import logo
+from src.terminal.limpar_tela import limparTela
+from src.output.gerar_beneficiarios import gerarBeneficiarios
+
 from src.core.selecionar_arquivo import selecionarArquivo
 from src.core.filtrar_planilha import verificarMatricula
-from src.core.gerar_beneficiarios import gerarBeneficiarios
 from src.core.buscar_matriculas import buscarMatriculas
-import os
+
 from pathlib import Path
 
 def iniciarMenu():
-
 	planilha_padrao = None
 	arquivo_gip = None
-
-	def limparTela():
-		os.system('cls')
 
 	limparTela()
 
@@ -25,9 +23,6 @@ def iniciarMenu():
 
 		else:
 			print(f"Arquivos selecionados: {planilha_padrao}, {arquivo_gip}")
-
-
-
 
 	while True:
 		limparTela()

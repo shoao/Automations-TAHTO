@@ -1,5 +1,7 @@
 from openpyxl import load_workbook
 from openpyxl import Workbook
+from src.terminal.limpar_tela import limparTela
+from src.terminal.logo_tahto import logo
 
 def buscarMatriculas(arquivo_gip):
 
@@ -13,6 +15,10 @@ def buscarMatriculas(arquivo_gip):
 		else:
 			print(f"\nMatricula: {matricula} adicionada. \n")
 			matriculas.append(matricula)
+
+	limparTela()
+	print(logo)
+	print(f"\n Verificando Matriculas: {matriculas}\n")
 
 	while True:
 
